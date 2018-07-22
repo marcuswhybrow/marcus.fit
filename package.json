@@ -1,0 +1,22 @@
+{
+  "name": "marcus.fit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcuswhybrow/marcus.fit.git"
+  },
+  "author": "Marcus Whybrow",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/marcuswhybrow/marcus.fit/issues"
+  },
+  "homepage": "https://github.com/marcuswhybrow/marcus.fit#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}
