@@ -8,13 +8,12 @@
     <style>
       body {
         margin: 0;
-        padding: 0;
+        padding: 20px;
         background-color: #fcfcfc;
       }
 
       #title, p {
         margin: 0 auto;
-        max-width: 600px;
       }
 
       #title {
@@ -22,15 +21,29 @@
         font-family: "Quicksand", sans-serif;
         font-size: 50px;
         font-weight: normal;
-        margin-top: 80px;
+
+        margin-top: 20px;
         margin-bottom: 20px;
         position: relative;
         left: -3px;
       }
+
       p {
         font-family: "Quicksand", sans-serif;
         font-size: 16px;
         line-height: 22px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        #title, p {
+          max-width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        #title, p {
+          max-width: 600px;
+        }
       }
     </style>
   </head>
