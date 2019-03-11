@@ -5,40 +5,56 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 
     <style>
       body {
         margin: 0;
         padding: 20px;
+        padding-top: 40px;
         background-color: #fcfcfc;
       }
 
-      #title, p {
+      h1, h2, h3, h4, h5, h6, p,
+      #chart-bolt {
         margin: 0 auto;
         max-width: 100%;
+        font-family: "Quicksand", sans-serif;
       }
 
       #title {
-        color: #1c0027;
-        font-family: "Quicksand", sans-serif;
-        font-size: 50px;
-        font-weight: normal;
-
-        margin-top: 20px;
-        margin-bottom: 20px;
-        position: relative;
-        left: -3px;
+        color: #242424;
         min-width: 300px;
+        position: relative;
+        left: -0.05em;
+        
+        font-size: 200%;
+        font-weight: normal;
       }
 
       p {
-        font-family: "Quicksand", sans-serif;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 100%;
+        line-height: 140%;
+        margin: 1em auto;
+      }
+
+      #chart-bolt {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+
+      #chart-bolt .ct-series-a .ct-line {
+        stroke: #242424;
+        stroke-width: 2px;
+      }
+      #chart-bolt .ct-series-a .ct-point {
+        stroke: #242424;
+        stroke-width: 6px;
       }
 
       @media only screen and (min-width: 600px) {
-        #title, p {
+        h1, h2, h3, h4, h5, h6, p {
           max-width: 600px;
         }
       }
@@ -46,6 +62,49 @@
   </head>
   <body>
     <h1 id="title">marcus . fit</h1>
-    <p>I'm trying to improve my BOLT score to access that parasympathetic nervous system calmness. My BOLT should be 40 seconds, but I'm currently only around 15-20. Apparently, every 5 second increase brings notisible health improvements, including lowering heart rate, less need to breath, and more oxygen for cellular energy production.</p>
+    <p>The Oxygen Advantage is a book with a singular claim: breath right, and every cell, muscle and organ will level up. A lifetime of breathing through the mouth, modern diets, and activities sedentary has left the respiratory system confused. Instead of ensuring a hearty supply of oxygen to my cells, the more intensely I breath the more I'm actually suffocating my organs!</p>
+
+    <p>You can measure it, claims the author, with a Body Oxygen Level Test (BOLT). A simple breath holding exercise that exposes the character of your respiratory system. I'm putting these theories to the test, by moving my BOLT score higher, entraining my autonomic nervous system to do the right thing again. This is my progress so far:</p>
+
+    <div id="chart-bolt"></div>
+    <p style="margin-top: 0">BOLT</p>
   </body>
+
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script>
+
+    boltData = [
+      18.6,
+      21.19
+    ]
+
+    new Chartist.Line('#chart-bolt', {
+      series: [boltData]
+    }, {
+      width: '100%',
+      height: '50px',
+      showPoint: false,
+      lineSmooth: false,
+      // fullWidth: true,
+      chartPadding: {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0
+      },
+      axisX: {
+        showGrid: false,
+        offset: 0,
+      },
+      axisY: {
+        showGrid: false,
+        showLabel: false,
+        offset: 1,
+      }
+    }, [
+      ['only screen and (min-width: 600px)', {
+        width: '600px',
+      }]
+    ]);
+  </script>
 </html>
