@@ -1,261 +1,41 @@
 <html>
-    <head>
+  <head>
+    <title>Marcus Whybrow</title>
+    <meta name="description" content="I'm Marcus Whybrow. This is my writing and art.">
 
-        <title>Marcus Whybrow</title>
-        <meta name="description" content="I'm Marcus Whybrow. In all quarries I value fitness.">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css?family=Oleo+Script|Quicksand|Gaegu:700" rel="stylesheet">
-        <style>
-            * {
-                margin: 0; padding: 0;
-            }
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fcfcfc;
+      }
 
-            body {
-                position: relative;
-                background-color: #fafafa;
+      #title, p {
+        margin: 0 auto;
+        max-width: 600px;
+      }
 
-                background: radial-gradient(transparent 10%, #aaa), #fafafa;
-
-                animation-duration: 32s;
-                animation-iteration-count: infinite;
-                animation-name: sparkle-body;
-            }
-            @keyframes sparkle-body {
-                1% { background: radial-gradient(transparent 10%, #aaa), #fafafa }
-                26% { background: radial-gradient(transparent 10%, #bbb), #fafafa }
-                46% { background: radial-gradient(transparent 10%, #aaa), #fafafa }
-                66% { color: radial-gradient(transparent 10%, #bbb), #fafafa }
-                86% { color: radial-gradient(transparent 10%, #aaa), #fafafa }
-            }
-
-            #content {
-                width: 100%;
-
-                position: absolute;
-                top: 50%;
-                margin: -200px 0 0 0;
-            }
-
-            .desc {
-                position: relative;
-                height: 400px;
-                text-align: center;
-            }
-
-            .desc .marcus {
-                top: 0;
-                color: #111;
-                margin: 0 auto;
-            }
-
-            .desc .dot {
-                position: relative;
-                top: -10px;
-                width: 100px;
-                font-size: 100px;
-                color: #111;
-
-                text-align: center;
-                font-size: 50px;
-                font-family: 'Oleo Script', cursive;
-            }
-
-            .desc .fit {
-                color: #f00;
-                animation-name: sparkle;
-                animation-duration: 32s;
-                animation-iteration-count: infinite;
-            }
-
-            .desc { color: #111 }
-            .desc h2 {
-                font-size: 60px;
-                font-family: 'Oleo Script', cursive;
-                margin-bottom: -10px;
-            }
-
-            @keyframes sparkle {
-                1% { color: #f00  }
-                4% { color: #f00  }
-                20% { color: #500 }
-
-                26% { color: #00f }
-                30% { color: #00f }
-                40% { color: #005 }
-
-                46% { color: rgb(255, 0, 200) }
-                50% { color: rgb(255, 0, 200) }
-                60% { color: rgb(85, 0, 67) }
-
-                66% { color: rgb(255, 196, 0) }
-                70% { color: rgb(255, 196, 0) }
-                80% { color: rgb(85, 76, 0) }
-
-                86% { color: #0f0 }
-                90% { color: #0f0 }
-                100% { color: #050 }
-            }
-
-            #big-five {
-                margin: 10px auto 0;
-                width: 250px;
-                position: relative;
-                opacity: 0.4;
-            }
-            #big-five > div {
-                display: block;
-                overflow: auto;
-            }
-            #big-five > div > div {
-                display: block;
-                height: 3px;
-                margin-bottom: 10px;
-                animation-duration: 32s;
-                animation-iteration-count: infinite;
-            }
-
-            /* Set the widths of each bar to represent my percentile for each aspect */
-            #big-five > .agreeableness {}
-            #big-five .agreeableness .compassion { width: calc(100% - 31%); float: right }
-            #big-five .agreeableness .politeness { width: calc(100% - 2%); float: right }
-            #big-five .conscientiousness { }
-            #big-five .conscientiousness .industriousness { width: 73%; left: 0px }
-            #big-five .conscientiousness .orderliness { width: 66%; left: 0px }
-            #big-five .extraversion { }
-            #big-five .extraversion .enthusiasm { width: 53%; left: 0px }
-            #big-five .extraversion .assertiveness {  width: 73%; left: 0px }
-            #big-five .neuroticism { }
-            #big-five .neuroticism .withdrawal {  width: 52%; left: 0px }
-            #big-five .neuroticism .volativity {  width: 68%; left: 0px }
-            #big-five .openness-to-experience { }
-            #big-five .openness-to-experience .intellect {  width: 97%; left: 0px }
-            #big-five .openness-to-experience .openness {  width: 57%; left: 0px }
-
-            /* Make each aspect pulse it's colour in time with the main animation */
-            @keyframes sparkle-agreeableness {
-                0% { background-color: #ccc }
-                3% { background-color: #F44  }
-                6% { background-color: #F44  }
-                26% { background-color: #ccc }
-                100% { background-color: #ccc }
-            }
-            @keyframes sparkle-conscientiousness {
-                0% { background-color: #ccc }
-                20% { background-color: #ccc }
-                26% { background-color: #44F  }
-                30% { background-color: #44F  }
-                46% { background-color: #ccc }
-                100% { background-color: #ccc }
-            }
-            @keyframes sparkle-extraversion {
-                0% { background-color: #ccc }
-                40% { background-color: #ccc }
-                46% { background-color: #F4D  }
-                50% { background-color: #F4D  }
-                66% { background-color: #ccc }
-                100% { background-color: #ccc }
-            }
-            @keyframes sparkle-neuroticism {
-                0% { background-color: #ccc }
-                60% { background-color: #ccc }
-                66% { background-color: #DA4  }
-                70% { background-color: #DA4  }
-                86% { background-color: #ccc }
-                100% { background-color: #ccc }
-            }
-            @keyframes sparkle-openness-to-experience {
-                0% { background-color: #ccc }
-                70% { background-color: #ccc }
-                86% { background-color: #4F4 }
-                90% { background-color: #4F4 }
-                100% { background-color: #ccc }
-            }
-            #big-five .agreeableness > div {
-                background-color: #F44;
-                animation-name: sparkle-agreeableness;
-            }
-            #big-five .conscientiousness > div {
-                background-color: #44F;
-                animation-name: sparkle-conscientiousness;
-            }
-            #big-five .extraversion > div {
-                background-color: #F4D;
-                animation-name: sparkle-extraversion;
-            }
-            #big-five .neuroticism > div {
-                background-color: #DA4;
-                animation-name: sparkle-neuroticism;
-            }
-            #big-five .openness-to-experience > div {
-                background-color: #4F4;
-                animation-name: sparkle-openness-to-experience;
-            }
-
-        </style>
-    </head>
-    <body>
-        <div id="content">
-            <div class="desc">
-                <div id="big-five">
-                    <!-- The Big Five Aspects Scale -->
-
-                    <div class="agreeableness">
-                        <!-- Very Low (8th percentile) -->
-
-                        <div class="compassion">
-                            <!-- Moderate Low (31st percentile) -->
-                        </div> 
-                        <div class="politeness">
-                            <!-- Exceptionally Low (2nd percentile) -->
-                        </div> 
-                    </div>
-
-                    <div class="conscientiousness">
-                        <!-- Moderately High (72nd percentile) -->
-
-                        <div class="industriousness">
-                            <!-- Moderately High (73 percentile) -->
-                        </div>
-                        <div class="orderliness">
-                            <!-- Moderately High (66th percentile) -->
-                        </div>
-                    </div>
-
-                    <div class="extraversion">
-                        <!-- Moderately High (66th percentile) -->
-
-                        <div class="enthusiasm">
-                            <!-- Average (53rd percentile) -->
-                        </div>
-                        <div class="assertiveness">
-                            <!-- Moderately High (73rd percentile) -->
-                        </div>
-                    </div>
-
-                    <div class="neuroticism">
-                        <!-- Moderately High (61st percentile) -->
-
-                        <div class="withdrawal">
-                            <!-- Average (52nd percentile) -->
-                        </div>
-                        <div class="volativity">
-                            <!-- Moderately High (68th percentile) -->
-                        </div>
-                    </div>
-                    <div class="openness-to-experience">
-                        <!-- Very High (89th percentile) -->
-
-                        <div class="intellect">
-                            <!-- Exceptionally High (97th percentile) -->
-                        </div>
-                        <div class="openness">
-                            <!-- Average (57th percentile) -->
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title"><span class="marcus">marcus <span class="dot">.</span> <span class="fit">fit</span></h2>
-            </div>
-        </div>
-    </body>
+      #title {
+        color: #1c0027;
+        font-family: "Quicksand", sans-serif;
+        font-size: 50px;
+        font-weight: normal;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        position: relative;
+        left: -3px;
+      }
+      p {
+        font-family: "Quicksand", sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">marcus . fit</h1>
+    <p>I'm trying to improve my BOLT score to access that parasympathetic nervous system calmness. My BOLT should be 40 seconds, but I'm currently only around 15-20. Apparently, every 5 second increase brings notisible health improvements, including lowering heart rate, less need to breath, and more oxygen for cellular energy production.</p>
+  </body>
 </html>
