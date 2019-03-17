@@ -65,10 +65,6 @@
         stroke: #d40353;
       }
 
-      #chart-screentime .ct-series-a .ct-line {
-        stroke: #a18d8d;
-      }
-
       @media only screen and (min-width: 600px) {
         h1, h2, h3, h4, h5, h6, p {
           max-width: 600px;
@@ -83,10 +79,6 @@
     <p>You can measure it, claims the author, with a Body Oxygen Level Test (BOLT). A simple breath holding exercise that exposes the character of your respiratory system. I'm putting these theories to the test, by moving my BOLT score higher, entraining my autonomic nervous system to do the right thing again. This is my progress so far:</p>
 
     <div id="chart-bolt" class="chart"></div>
-
-    <p>At the same time, I'd like to see if fitness correlates with psychological improvements. Tracking my iPad Screen Time seems like a decent measure. That's where I watch YouTube when flustered and dispirited:</p>
-
-    <div id="chart-screentime" class="chart"></div>
   </body>
 
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
@@ -102,26 +94,6 @@
       20.67, // Sat 16 Mar 2019
       30.33, // Sun 17 Mar 2019
     ];
-
-    var ipadScreenTimeData = [
-      [07, 31], // Sun 10 Mar 2019
-      [05, 54], // Mon 11 Mar 2019
-      [09, 33], // Tue 12 Mar 2019
-      [02, 44], // Wed 13 Mar 2019
-      [0,  34], // Thu 14 Mar 2019
-      null,
-      null,
-      null,
-    ];
-
-    // Convert hour/minute tuple into mintues
-    ipadScreenTimeData = ipadScreenTimeData.map(x => {
-      if (x !== null) {
-        return x[0] * 60 + x[1];
-      } else {
-        return null;
-      }
-    });
 
     var chartOptions = {
       width: '100%',
@@ -155,13 +127,6 @@
     new Chartist.Line(
       '#chart-bolt',
       { series: [boltData] },
-      chartOptions,
-      chartResponsiveOptions
-    );
-
-    new Chartist.Line(
-      '#chart-screentime',
-      { series: [ipadScreenTimeData] },
       chartOptions,
       chartResponsiveOptions
     );
